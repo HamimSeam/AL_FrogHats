@@ -1,6 +1,6 @@
 # AL_FrogHats
-*Team FrogHats
-*Jacob Ng Kevin Cheng Hamim Seam
+* Team FrogHats
+* Jacob Ng Kevin Cheng Hamim Seam
 
 # ALTester
 
