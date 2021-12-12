@@ -2,7 +2,7 @@ import java.util.*;
 
 public class OrderedArrayList{
 
-    ArrayList<Integer> _info = new ArrayList<Integer>();
+    ArrayList<Integer> _info = new ArrayList<Integer>();  //got a deprecated api note when I forgot the <Integer> part
 
     public boolean add( int e ){
 
@@ -12,7 +12,7 @@ public class OrderedArrayList{
         }else{
             for(int i = 0; i < _info.size(); i++){
 
-              Integer indexV = _info.get(i);
+              Integer indexV = _info.get(i);  //got a deprecated api note when I used new Integer
 
               if(indexV.compareTo(e) == 0){
                   _info.add(i+1, e);
