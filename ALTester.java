@@ -1,16 +1,34 @@
+import java.util.*;
+
 public class ALTester {
 
-	public static void main(String[] args){
-			OrderedArrayList Bob = new OrderedArrayList();
+	static boolean CheckOrdered(ArrayList<Integer> array) {
+		for ( int i = 0; i < array.size() - 1; i++ ) 
+			if ( array.get(i) > array.get(i + 1) ) 
+				return false;
 
-			for(int i = 0; i < 23; i++){
-					Bob.add((int)(Math.random()*100));
-			}
-			for(int i = 0; i < Bob._info.size(); i++){
-					System.out.print(Bob._info.get(i) + ",");
-			}
+		return true;
 	}
 
+	static String PrintArray(ArrayList<Integer> array) {
+		String arrayString = "[";
+		for ( Integer num : array ) arrayString += num + " ,";
+		arrayString += "]";
+		return arrayString;
+	}
 
+	public static void main(String[] args){
+		ArrayList<Integer> Bob = new ArrayList<Integer>();
+		//ArrayList<Integer> Charlie = new ArrayList<Integer>();
+		//Charlie.add(2);
+		//Charlie.add(2);
 
+		for ( int i = 0; i < 23; i++ )
+			Bob.add( (int) (Math.random()*100) );
+
+		//System.out.println(PrintArray(Bob));
+		System.out.println(CheckOrdered(Bob));
+		//System.out.println(CheckOrdered(Charlie));
+
+	}
 }
